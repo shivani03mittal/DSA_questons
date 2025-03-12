@@ -1,6 +1,8 @@
+package GRAPH_lec;
+
 import java.util.ArrayList;
 
-public class Graph_cycle {
+public class  Graph_cycle {
         static class Edge{
             int src;
             int dest;

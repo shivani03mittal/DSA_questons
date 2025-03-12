@@ -1,6 +1,8 @@
+package GRAPH_lec;
+
 import java.util.ArrayList;
 
-public class Graph_cycledetection_undirected {
+public class  Graph_cycledetection_undirected {
 
         static class Edge{
             int src;

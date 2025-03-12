@@ -1,3 +1,5 @@
+package GRAPH_lec;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -66,17 +68,21 @@ public class Graph_traversal {
     }
     private  static void dfs(ArrayList<Edge> graph[], int curr, boolean vis[])
     {
-        System.out.print(curr+" ");
-        vis[curr]= true;
-        for (int i=0;i< graph[curr].size();i++)
-        {
-            Edge e = graph[curr].get(i);
+//        if(!vis[curr]) {
+            System.out.print(curr + " ");
+            vis[curr] = true;
+            for (int i = 0; i < graph[curr].size(); i++) {
+                Edge e = graph[curr].get(i);
             if(vis[e.dest]==false)
                 dfs(graph, e.dest, vis);
-        }
+            }
+//        }
     }
+
+
     public static void allpaths(ArrayList<Edge> graph[], boolean vis[], int curr, int target, String path)
     {
+        //T(n) = O(v*v)
 //        base case
         if(curr==target)
         {
@@ -84,16 +90,18 @@ public class Graph_traversal {
             return;
         }
 
+        vis[curr]= true;
         for(int i=0;i< graph[curr].size();i++)
         {
             Edge e = graph[curr].get(i);
             if(!vis[e.dest])
             {
-                vis[curr]= true;
+//                vis[curr]= true;
                 allpaths(graph, vis,e.dest,target,path+e.dest);
-                vis[curr]= false;
+//                vis[curr]= false;
             }
         }
+        vis[curr]= false;
     }
     public static void main(String[] args) {
     int V = 7;

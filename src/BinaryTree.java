@@ -27,7 +27,8 @@ public class BinaryTree {
             return nn;
         }
     }
-
+//traversal
+    //O(n)
     public static void preOreder(Node root){
         if(root == null)
         {
@@ -38,6 +39,7 @@ public class BinaryTree {
         preOreder(root.left);
         preOreder(root.right);
     }
+
     public static void inOreder(Node root){
         if(root == null)
         {

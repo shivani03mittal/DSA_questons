@@ -1,6 +1,7 @@
 package GFG;
 
 public class CountOfNodes {
+    /* use recursion left subtree count+ right count tree +1 */
 //    public static int getSize(Node root)
 //    {
 ////add Code here.
